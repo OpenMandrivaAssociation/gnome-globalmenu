@@ -4,7 +4,7 @@
 
 Name: gnome-globalmenu
 Version: 0.7.9
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: A globally-shared menu bar of all applications launched in desktop session
 
 Group: Graphical desktop/GNOME
