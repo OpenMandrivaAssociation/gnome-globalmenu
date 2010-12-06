@@ -1,7 +1,3 @@
-%define _disable_ld_as_needed 1
-%define _disable_ld_no_undefined 1
-%define _disable_libtoolize 1
-
 Name: gnome-globalmenu
 Version: 0.7.9
 Release: %mkrel 2
@@ -11,6 +7,8 @@ Group: Graphical desktop/GNOME
 License: GPL
 URL: http://code.google.com/p/gnome2-globalmenu/
 Source0: http://gnome2-globalmenu.googlecode.com/files/%{name}-%{version}.tar.bz2
+Patch0: gnome-globalmenu-0.7.9-fix-link.patch
+Patch1: gnome-globalmenu-0.7.9-xfce-dir.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires: pkgconfig, gettext, scrollkeeper, intltool
 BuildRequires: perl-XML-Parser, gnome-doc-utils
@@ -51,6 +49,8 @@ This package adds xfce4 support for this functionality.
 
 %prep
 %setup -q
+%patch0 -p0
+%patch1 -p0
 
 %build
 %configure2_5x --disable-tests
@@ -81,7 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %files xfce4
 %defattr(-,root,root,-)
 %doc AUTHORS ChangeLog COPYING README.XFCE
-%{_libdir}/xfce4/panel-plugins/GlobalMenu.XFCEPlugin
+%{_libexecdir}/xfce4/panel-plugins/GlobalMenu.XFCEPlugin
 %{_datadir}/xfce4/panel-plugins/GlobalMenu_XFCEPlugin.desktop
 %{_datadir}/pixmaps/globalmenu-xfce.png
 
