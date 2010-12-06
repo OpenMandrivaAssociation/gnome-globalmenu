@@ -1,6 +1,6 @@
 Name: gnome-globalmenu
 Version: 0.7.10
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: A globally-shared menu bar of all applications launched in desktop session
 
 Group: Graphical desktop/GNOME
@@ -29,6 +29,8 @@ just fine with Global Menu.
 %package devel
 Summary: Headers and libraries for development with gnome-globalmenu
 Group: Development/GNOME and GTK+
+Requires: %{name} = %{version}
+Conflicts: %{name} < 0.7.10-2
 
 %description devel
 This package provides the headers and libraries required for development of
@@ -74,7 +76,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/bonobo/servers/*
 %{_libdir}/gtk-2.0/modules/libglobalmenu*.so
 %{_libdir}/libglobalmenu-server.so.*
-%{_libdir}/pkgconfig/globalmenu-server.pc
 %{_mandir}/man1/*
 %{_datadir}/pixmaps/globalmenu.png
 
@@ -90,5 +91,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/*
 %{_libdir}/libglobalmenu-server.so
 %{_libdir}/libglobalmenu-server.la
+%{_libdir}/pkgconfig/globalmenu-server.pc
 %{_libdir}/gtk-2.0/modules/libglobalmenu-gnome-panel.la
 %{_libdir}/gtk-2.0/modules/libglobalmenu-plugin.la
