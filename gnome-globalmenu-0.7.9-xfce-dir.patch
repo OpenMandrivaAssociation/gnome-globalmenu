@@ -1,0 +1,26 @@
+--- configure.ac.xfce	2010-12-06 08:37:46.000000000 +0100
++++ configure.ac	2010-12-06 08:38:40.000000000 +0100
+@@ -150,8 +150,8 @@
+ 		with_xfce4_panel=true;
+ 		AC_SUBST(XFCE4_PANEL_CFLAGS)
+ 		AC_SUBST(XFCE4_PANEL_LIBS)
+-		XFCE4_PANEL_PLUGIN_DIR="$($PKG_CONFIG --variable=libexecdir libxfce4panel-1.0)/xfce4/panel-plugins"
+-		XFCE4_PANEL_DESKTOP_DIR="$($PKG_CONFIG --variable=datadir libxfce4panel-1.0)/xfce4/panel-plugins"
++		XFCE4_PANEL_PLUGIN_DIR="$($PKG_CONFIG --variable=libdir libxfce4panel-1.0)/xfce4/panel-plugins"
++		XFCE4_PANEL_DESKTOP_DIR="$($PKG_CONFIG --variable=prefix libxfce4panel-1.0)/share/xfce4/panel-plugins"
+ 		AC_SUBST(XFCE4_PANEL_PLUGIN_DIR)
+ 		AC_SUBST(XFCE4_PANEL_DESKTOP_DIR)
+ 		],
+--- configure.orig	2010-12-06 08:41:19.000000000 +0100
++++ configure	2010-12-06 08:42:06.000000000 +0100
+@@ -15162,8 +15162,8 @@
+ 		with_xfce4_panel=true;
+ 
+ 
+-		XFCE4_PANEL_PLUGIN_DIR="$($PKG_CONFIG --variable=libexecdir libxfce4panel-1.0)/xfce4/panel-plugins"
+-		XFCE4_PANEL_DESKTOP_DIR="$($PKG_CONFIG --variable=datadir libxfce4panel-1.0)/xfce4/panel-plugins"
++		XFCE4_PANEL_PLUGIN_DIR="$($PKG_CONFIG --variable=libdir libxfce4panel-1.0)/xfce4/panel-plugins"
++		XFCE4_PANEL_DESKTOP_DIR="$($PKG_CONFIG --variable=prefix libxfce4panel-1.0)/share/xfce4/panel-plugins"
+ 
+ 
+ 

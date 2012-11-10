@@ -1,0 +1,22 @@
+--- libserver/Makefile.am.link	2010-12-06 08:29:48.000000000 +0100
++++ libserver/Makefile.am	2010-12-06 08:30:03.000000000 +0100
+@@ -50,7 +50,7 @@
+ 			 -include $(CONFIG_HEADER) \
+ 			 -include ../legacy-support/legacy-support.h
+ 
+-libglobalmenu_server_la_LIBADD = ../legacy-support/liblegacy-support.la
++libglobalmenu_server_la_LIBADD = ../legacy-support/liblegacy-support.la $(WNCK_LIBS)
+ 
+ libglobalmenu_server_la_LDFLAGS = -version-info 3:0:0 -Wl,--as-needed
+ 
+--- libserver/Makefile.in.link	2010-12-06 08:30:09.000000000 +0100
++++ libserver/Makefile.in	2010-12-06 08:30:22.000000000 +0100
+@@ -380,7 +380,7 @@
+ 			 -include $(CONFIG_HEADER) \
+ 			 -include ../legacy-support/legacy-support.h
+ 
+-libglobalmenu_server_la_LIBADD = ../legacy-support/liblegacy-support.la
++libglobalmenu_server_la_LIBADD = ../legacy-support/liblegacy-support.la $(WNCK_LIBS)
+ libglobalmenu_server_la_LDFLAGS = -version-info 3:0:0 -Wl,--as-needed
+ BUILT_SOURCES = vala-ccode
+ EXTRA_DIST = \
