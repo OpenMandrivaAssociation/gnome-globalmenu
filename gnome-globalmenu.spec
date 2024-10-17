@@ -5,7 +5,7 @@ Summary: A globally-shared menu bar of all applications launched in desktop sess
 
 Group: Graphical desktop/GNOME
 License: GPL
-URL: http://code.google.com/p/gnome2-globalmenu/
+URL: https://code.google.com/p/gnome2-globalmenu/
 Source0: http://gnome2-globalmenu.googlecode.com/files/%{name}-%{version}.tar.bz2
 Patch0: gnome-globalmenu-0.7.9-fix-link.patch
 Patch1: gnome-globalmenu-0.7.9-xfce-dir.patch
