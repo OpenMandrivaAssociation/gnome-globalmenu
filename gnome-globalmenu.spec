@@ -10,6 +10,11 @@ Source0: http://gnome2-globalmenu.googlecode.com/files/%{name}-%{version}.tar.bz
 Patch0: gnome-globalmenu-0.7.9-fix-link.patch
 Patch1: gnome-globalmenu-0.7.9-xfce-dir.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig, gettext, scrollkeeper, intltool
 BuildRequires: perl-XML-Parser, gnome-doc-utils
 BuildRequires: libgnomeui2-devel
