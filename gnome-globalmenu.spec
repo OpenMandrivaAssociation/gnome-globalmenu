@@ -1,6 +1,6 @@
 Name: gnome-globalmenu
 Version: 0.7.10
-Release: %mkrel 3
+Release: 4
 Summary: A globally-shared menu bar of all applications launched in desktop session
 
 Group: Graphical desktop/GNOME
